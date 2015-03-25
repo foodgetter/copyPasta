@@ -1,6 +1,6 @@
 {
 "manifest_version":2,
-"name":"copypasta",
+"name":"copyPasta",
 "version":"0.1",
 
 "background":{
@@ -11,19 +11,16 @@
 "content_scripts":[
 	{
 		"matches":["http://*/*","https://*/*"],
-		"js":["mousetrap.min.js", "contentscript.js"]
+		"js":["contentscript.js"]
 	}
 ],
 
-"commands":{
-	"copy":{
-		"suggested_key":{
-			"default":"Alt+Shift+C",
-			"mac":"Alt+Shift+C"
-			},
-		"description":"initiate copypasta!"
-		}
-	},
+"commands": {
+	"start_copy": {
+		"suggested_key": "Alt+C",
+		"description": "Start copyPasta on the selection"
+	}
+},
 
 "permissions":[
 "activeTab",
