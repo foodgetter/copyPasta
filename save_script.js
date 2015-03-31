@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
 	document.title = "copyPasta :~)"
 	
-	//Paste the selected text in the input field
-	document.getElementById("inputTextToSave").focus();
-	document.execCommand('Paste');
+	//Paste all the copied text in the input field
+	document.getElementById("completeTextToSave").value = localStorage.copiedtext;
 	document.getElementById("txtFileName").focus();
 
 	document.querySelector('button').addEventListener('click', saveTextAsFile);
@@ -13,7 +12,7 @@ function saveTextAsFile()
 {      
 
 // grab the content of the form field and place it into a variable
-    var textToWrite = document.getElementById("inputTextToSave").value;
+    var textToWrite = document.getElementById("completeTextToSave").value;
 //  create a new Blob (html5 magic) that conatins the data from your form feild
     var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
 // Specify the name of the file to be saved
@@ -46,6 +45,9 @@ function saveTextAsFile()
     
 // click the new link
     downloadLink.click();
+
+// remove the stored text from local storage
+	localStorage.removeItem("copiedtext");
     
     window.close()
 }

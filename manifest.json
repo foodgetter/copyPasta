@@ -19,6 +19,10 @@
 	"start_copy": {
 		"suggested_key": "Alt+C",
 		"description": "Start copyPasta on the selection"
+	},
+		"start_save": {
+		"suggested_key": "Alt+S",
+		"description": "Save copyPasta"
 	}
 },
 
