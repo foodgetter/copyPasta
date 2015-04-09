@@ -10,6 +10,30 @@ chrome.commands.onCommand.addListener(function(command) {
 
 chrome.runtime.onMessage.addListener(
   function(request) {
-    if (request.type == "launchCopyPage")
-    	window.open("copy_page.html", "copyPasta", "height=350,width=540");
+    if (request.type == "launchCopyPage"){
+    	copyTextToLocalMemory(request.url, request.description, request.text);
+    	} 
 });
+
+function copyTextToLocalMemory(url, description, text)
+{
+	var textToCopy = description+"\r\n \r\n" + "URL: " + url + "\r\n \r\n" + text;
+	//save text to local storage
+	if(localStorage.copiedtext){
+		updateStoredText(textToCopy);
+	} else{
+		localStorage.copiedtext = textToCopy;
+	}
+	var notification=new Notification('Copied :~) from',{
+		body: description,
+		icon: "https://plus.google.com/_/favicon?domain_url="+url
+	});
+	setTimeout(function(){
+		notification.close(); //closes the notification
+	},1500);
+}
+
+function updateStoredText(text){
+	var addedText = "\r\n" + "\r\n" + "======================================================" + "\r\n" + "\r\n" + text;
+	localStorage.copiedtext = localStorage.copiedtext + addedText;
+}
