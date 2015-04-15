@@ -26,7 +26,7 @@ function copyTextToLocalMemory(url, description, text)
 	}
 	var notification=new Notification('Copied :~) from',{
 		body: description,
-		icon: "https://plus.google.com/_/favicon?domain_url="+url
+		icon: "assets/icon128.png"
 	});
 	setTimeout(function(){
 		notification.close(); //closes the notification

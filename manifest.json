@@ -1,7 +1,15 @@
 {
 "manifest_version":2,
-"name":"copyPasta",
+"name":"NoteCommet",
 "version":"0.1",
+
+"icons":{
+  "16": "assets/icon16.png",
+  "32": "assets/icon32.png",
+  "48": "assets/icon48.png",
+  "128": "assets/icon128.png"
+  
+},
 
 "background":{
 	"persistent":false,
@@ -18,11 +26,11 @@
 "commands": {
 	"start_copy": {
 		"suggested_key": "Alt+C",
-		"description": "Start copyPasta on the selection"
+		"description": "Start copy on the selection"
 	},
 	"start_save": {
 	"suggested_key": "Alt+S",
-	"description": "Save copyPasta"
+	"description": "Save copied text"
 	}
 },
 

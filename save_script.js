@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-	document.title = "copyPasta :~)"
+	document.title = "copyPasta :~)";
 	
 	//Paste all the copied text in the input field
 	document.getElementById("completeTextToSave").value = localStorage.copiedtext;
@@ -49,7 +49,7 @@ function saveTextAsFile()
 // remove the stored text from local storage
 	localStorage.removeItem("copiedtext");
     
-    window.close()
+    window.close();
 }
 
 function destroyClickedElement(event)
