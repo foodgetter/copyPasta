@@ -1,4 +1,6 @@
-savewindowstart_h = 
+var savewindowstart_left = (screen.width/2) - 282;
+var savewindowstart_top = (screen.height/2) - 315;
+
 
 chrome.commands.onCommand.addListener(function(command) {
 	if(command == "start_copy"){
@@ -6,7 +8,7 @@ chrome.commands.onCommand.addListener(function(command) {
   			chrome.tabs.sendMessage(tabs[0].id, {type: "startcopy"});
   			});
   		} else if(command == "start_save"){
-  			window.open("save_page.html", "copyPasta", "height=630,width=565");
+  			window.open("save_page.html", "copyPasta", "top="+savewindowstart_top+", left="+savewindowstart_left+", width=565, height=630, ");
   		}
 });
 

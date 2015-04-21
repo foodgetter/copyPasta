@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-	document.title = "copyPasta :~)";
+	document.title = "NoteComet :~)";
 	
 	//Paste all the copied text in the input field
 	document.getElementById("completeTextToSave").value = localStorage.copiedtext;
