@@ -1,29 +1,51 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head></title>Save Text as File</title>
-<link rel="icon" type="image/png" href="asstes/icon16.png" />
-<script type="text/javascript" src="save_script.js"></script>
-</head>
-<body>
+ <head>
+  <title> NoteComet </title>
+ 
+<link rel='stylesheet' href='CSS/save_page.css'>
+<link rel='shortcut icon' href='NoteComet.png'>
+ </head>
 
+ <body><image src="assets/header.png" width=532>
+ <br>
+  
+<div class="container">
+<div class="main">
+<div class="part2">
+<div class="tabs">
+		<p id="tab1" class="s1">Copied Text
+		</p>
+</div>
 <table>
-  <tr><td>Text to Save:</td></tr>
+  
   <tr>
 		<td colspan="3">
 		<!-- The textarea we are going to "download" -->
-			<textarea id="completeTextToSave" style="width:512px;height:256px"></textarea>
+			<textarea id="completeTextToSave" style="width:520px;height:300px"></textarea>
 		</td>
 	</tr>
 	<tr>
 	
 	<!-- Input allowing the user to name the downloaded file...-->
-	<td>Filename to Save As:</td>
-	<td><input id="txtFileName" value = "copypasta"></input></td>
+	<td><h3><pre> Save As:</pre> </h3></td>
+	<td><input id="txtFileName" value = "New Note"></input></td>
 
 	 <!--A button to call out JavaScript Function -->
-		<td><button>Save Text to File</button></td>
+	 <script type="text/javascript" src="save_script.js"></script>
+
+		<td><button id="save_button">Save & Download</button></td>
+		
 	</tr>
 
-</table>
-  </body>
+</table><br><br>
+
+	<!-- <center><b>For more info : <a href="www.notecomet.com">www.notecomet.com<a> -->
+</div>
+</div>
+	
+</div>
+
+
+</body>
 </html>

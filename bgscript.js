@@ -4,7 +4,7 @@ chrome.commands.onCommand.addListener(function(command) {
   			chrome.tabs.sendMessage(tabs[0].id, {type: "startcopy"});
   			});
   		} else if(command == "start_save"){
-  			window.open("save_page.html", "copyPasta", "height=350,width=540");
+  			window.open("save_page.html", "copyPasta", "height=620,width=560");
   		}
 });
 
