@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	document.getElementById("completeTextToSave").value = localStorage.copiedtext;
 	document.getElementById("txtFileName").focus();
 
-	document.querySelector('button').addEventListener('click', saveTextAsFile);
+	document.getElementById('download_button').addEventListener('click', saveTextAsFile);
+	document.getElementById('save_button').addEventListener('click', saveTextToClipboard);
 });
 
 function saveTextAsFile()
@@ -58,4 +59,10 @@ function destroyClickedElement(event)
     document.body.removeChild(event.target);
 }
 
+function saveTextToClipboard()
+{
+  //grab the content of the text field and place it in a variable
+  var textToSave = document.getElementById("completeTextToSave").value;
+  localStorage.copiedtext = textToSave;
+}
 // EOF
